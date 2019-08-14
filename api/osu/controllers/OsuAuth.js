@@ -40,7 +40,7 @@ module.exports = {
   getUserInfo: async function (ctx) {
     const response = await axios.get(`${strapi.config.osu_url}/api/v2/me`, {
       headers: {
-        authorization: `Bearer ${ctx.request.headers.authorization}`
+        authorization: ctx.request.headers.authorization
       }
     });
 
