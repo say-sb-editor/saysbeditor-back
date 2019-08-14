@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/auth/osu",
+      "handler": "OsuAuth.getToken"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/osu/me",
+      "handler": "OsuAuth.getUserInfo"
+    }
+  ]
+}
