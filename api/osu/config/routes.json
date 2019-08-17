@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "POST",
-      "path": "/auth/osu",
+      "path": "/auth/osu/token",
       "handler": "OsuAuth.getToken"
     },
     {

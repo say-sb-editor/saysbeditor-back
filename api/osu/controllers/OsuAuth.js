@@ -1,11 +1,10 @@
 const axios = require('axios');
-const url = require('url');
 const querystring = require('querystring');
 
 module.exports = {
   getToken: async function (ctx) {
-    const { query } = url.parse(ctx.req.url, true);
-    if (!query.code) {
+    const { code } = ctx.request.body;
+    if (!code) {
       return ctx.response.badRequest('authorization code is missing');
     }
 
@@ -15,7 +14,7 @@ module.exports = {
         client_id: process.env.osu_oauth_client_id,
         client_secret: process.env.osu_oauth_client_secret,
         redirect_uri: process.env.osu_oauth_redirect_url,
-        code: query.code,
+        code: code,
       };
       const oauthResponse = await axios.post(
         `${strapi.config.osu_url}/oauth/token`,
