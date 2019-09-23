@@ -17,11 +17,6 @@
     "name": {
       "type": "string"
     },
-    "user": {
-      "model": "user",
-      "via": "projects",
-      "plugin": "users-permissions"
-    },
     "cover": {
       "model": "file",
       "via": "related",
@@ -36,8 +31,13 @@
       "required": true,
       "type": "string"
     },
-    "updated_at": {
-      "type": "date"
+    "tags": {
+      "type": "string"
+    },
+    "user": {
+      "model": "user",
+      "via": "projects",
+      "plugin": "users-permissions"
     }
   }
 }
