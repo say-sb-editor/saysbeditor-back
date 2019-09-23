@@ -21,7 +21,7 @@
       "path": "/projects/:id",
       "handler": "Project.findOne",
       "config": {
-        "policies": []
+        "policies": ["isOwner"]
       }
     },
     {
@@ -29,7 +29,7 @@
       "path": "/projects",
       "handler": "Project.create",
       "config": {
-        "policies": []
+        "policies": ["global.setOwner"]
       }
     },
     {
@@ -37,7 +37,7 @@
       "path": "/projects/:id",
       "handler": "Project.update",
       "config": {
-        "policies": []
+        "policies": ["isOwner"]
       }
     },
     {
@@ -45,7 +45,7 @@
       "path": "/projects/:id",
       "handler": "Project.delete",
       "config": {
-        "policies": []
+        "policies": ["isOwner"]
       }
     }
   ]
