@@ -34,7 +34,7 @@
     "tags": {
       "type": "string"
     },
-    "user": {
+    "owner": {
       "model": "user",
       "via": "projects",
       "plugin": "users-permissions"

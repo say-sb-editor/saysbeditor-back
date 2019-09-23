@@ -56,10 +56,6 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "projects": {
-      "collection": "project",
-      "via": "user"
-    },
     "follows": {
       "collection": "user",
       "via": "followed_by",
@@ -69,6 +65,10 @@
       "model": "user",
       "via": "follows",
       "plugin": "users-permissions"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "owner"
     }
   }
 }
