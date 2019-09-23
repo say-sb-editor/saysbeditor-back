@@ -1,6 +1,2 @@
 {
-  "osu_url": "https://osu.ppy.sh",
-  "osu_oauth_client_id": "${process.env.osu_oauth_client_id",
-  "osu_oauth_client_secret": "${process.env.osu_oauth_client_secret}",
-  "osu_oauth_redirect_url": "${process.env.osu_oauth_redirect_url}"
 }
