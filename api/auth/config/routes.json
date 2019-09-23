@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/oauth/osu/token",
+      "handler": "osu.getToken"
+    },
+    {
+      "method": "GET",
+      "path": "/oauth/osu/@me",
+      "handler": "osu.getUserInfo"
+    },
+    {
+      "method": "POST",
+      "path": "/oauth/discord/token",
+      "handler": "discord.getToken"
+    },
+    {
+      "method": "GET",
+      "path": "/oauth/discord/@me",
+      "handler": "discord.getUserInfo"
+    }
+  ]
+}
