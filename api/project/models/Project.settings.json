@@ -7,15 +7,19 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
     "name": {
       "type": "string"
     },
-    "owner": {
+    "user": {
       "model": "user",
+      "via": "projects",
       "plugin": "users-permissions"
     },
     "cover": {
@@ -23,6 +27,17 @@
       "via": "related",
       "plugin": "upload",
       "required": true
+    },
+    "artist": {
+      "required": true,
+      "type": "string"
+    },
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "date"
     }
   }
 }
