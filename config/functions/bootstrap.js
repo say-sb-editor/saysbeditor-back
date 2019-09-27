@@ -9,6 +9,5 @@ require('dotenv').config({ path: require('find-config')('.env') });
  * run jobs, or perform some special logic.
  */
 
-module.exports = cb => {
-  cb();
+module.exports = () => {
 };
