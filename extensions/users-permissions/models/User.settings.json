@@ -69,6 +69,11 @@
     "projects": {
       "collection": "project",
       "via": "owner"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }
